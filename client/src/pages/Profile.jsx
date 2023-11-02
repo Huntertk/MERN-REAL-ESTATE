@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import { useRef, useState, useEffect } from 'react';
 import {
@@ -177,6 +178,10 @@ const handleFileUpload = (file) => {
         <button className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80 disabled:cursor-not-allowed' disabled={loading}>
           {loading ? "Loading..." : "update"}
         </button>
+        <Link 
+        to="/create-listing"
+        className='bg-green-700 text-white rounded-lg p-3 uppercase text-center hover:opacity-75'
+        >Create Listing</Link>
       </form>
       <div className='flex justify-between mt-5'>
         <span onClick={handleDeleteUser} className='text-red-700 cursor-pointer'>Delete account</span>
